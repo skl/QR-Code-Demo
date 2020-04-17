@@ -7,33 +7,18 @@
 //
 
 import SwiftUI
+import OneTimePassword
 
 struct ContentView: View {
-    var cameras = Cameras()
+    @ObservedObject var tokens = Tokens(keychain: Keychain.sharedInstance)
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        TabView {
-            CamerasView(filter: .none)
-                .tabItem {
-                    Image(systemName: "video.circle")
-                    Text("All")
-            }
-            CamerasView(filter: .online)
-                .tabItem {
-                    Image(systemName: "video.fill")
-                    Text("Online")
-            }
-            CamerasView(filter: .offline)
-                .tabItem {
-                    Image(systemName: "video.slash.fill")
-                    Text("Offline")
-            }
-            AddView()
-                .tabItem {
-                    Image(systemName: "video.badge.plus.fill")
-                    Text("Add")
-            }
-        }.environmentObject(cameras)
+        OTPView()
+            .environmentObject(tokens)
+            .onReceive(timer) { time in
+                self.tokens.emitChangeEvent()
+        }
     }
 }
 
