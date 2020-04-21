@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F174073244E4044002A6CD8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F174072244E4044002A6CD8 /* AppState.swift */; };
+		7F174075244E5DCB002A6CD8 /* ApiStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F174074244E5DCB002A6CD8 /* ApiStub.swift */; };
 		7F32AB232449EF410000BC36 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32AB222449EF410000BC36 /* Token.swift */; };
 		7FD2C85D2444BD830043444E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2C85C2444BD830043444E /* AppDelegate.swift */; };
 		7FD2C85F2444BD830043444E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2C85E2444BD830043444E /* SceneDelegate.swift */; };
@@ -46,6 +48,9 @@
 		3E31E7776F8EEFC6CFEBBB52 /* Pods-QR Code Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR Code Demo.debug.xcconfig"; path = "Target Support Files/Pods-QR Code Demo/Pods-QR Code Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		3EB99A937E442DA5640A987E /* Pods-QR Code Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QR Code Demo.release.xcconfig"; path = "Target Support Files/Pods-QR Code Demo/Pods-QR Code Demo.release.xcconfig"; sourceTree = "<group>"; };
 		53D2DB059CB7AB64FBC20762 /* Pods_QR_Code_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QR_Code_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F174071244DFDFA002A6CD8 /* QR Code Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "QR Code Demo.entitlements"; sourceTree = "<group>"; };
+		7F174072244E4044002A6CD8 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		7F174074244E5DCB002A6CD8 /* ApiStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStub.swift; sourceTree = "<group>"; };
 		7F32AB222449EF410000BC36 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		7FD2C8592444BD830043444E /* QR Code Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QR Code Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD2C85C2444BD830043444E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +105,6 @@
 		7FD2C8502444BD830043444E = {
 			isa = PBXGroup;
 			children = (
-				7FF616D52445FE4500C557F9 /* OTPView.swift */,
 				7FD2C85B2444BD830043444E /* QR Code Demo */,
 				7FD2C8722444BD840043444E /* QR Code DemoTests */,
 				7FD2C87D2444BD840043444E /* QR Code DemoUITests */,
@@ -124,12 +128,16 @@
 			isa = PBXGroup;
 			children = (
 				7FD2C85C2444BD830043444E /* AppDelegate.swift */,
-				7FD2C85E2444BD830043444E /* SceneDelegate.swift */,
-				7FD2C8602444BD830043444E /* ContentView.swift */,
+				7F174072244E4044002A6CD8 /* AppState.swift */,
+				7F174074244E5DCB002A6CD8 /* ApiStub.swift */,
 				7FD2C8622444BD840043444E /* Assets.xcassets */,
-				7FD2C8672444BD840043444E /* LaunchScreen.storyboard */,
+				7FD2C8602444BD830043444E /* ContentView.swift */,
 				7FD2C86A2444BD840043444E /* Info.plist */,
+				7FD2C8672444BD840043444E /* LaunchScreen.storyboard */,
+				7FF616D52445FE4500C557F9 /* OTPView.swift */,
 				7FD2C8642444BD840043444E /* Preview Content */,
+				7F174071244DFDFA002A6CD8 /* QR Code Demo.entitlements */,
+				7FD2C85E2444BD830043444E /* SceneDelegate.swift */,
 				7F32AB222449EF410000BC36 /* Token.swift */,
 			);
 			path = "QR Code Demo";
@@ -430,8 +438,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FF616D62445FE4500C557F9 /* OTPView.swift in Sources */,
+				7F174075244E5DCB002A6CD8 /* ApiStub.swift in Sources */,
 				7FD2C85D2444BD830043444E /* AppDelegate.swift in Sources */,
 				7FD2C85F2444BD830043444E /* SceneDelegate.swift in Sources */,
+				7F174073244E4044002A6CD8 /* AppState.swift in Sources */,
 				7FD2C8612444BD830043444E /* ContentView.swift in Sources */,
 				7F32AB232449EF410000BC36 /* Token.swift in Sources */,
 			);
@@ -599,6 +609,7 @@
 			baseConfigurationReference = 3E31E7776F8EEFC6CFEBBB52 /* Pods-QR Code Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "QR Code Demo/QR Code Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"QR Code Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = VWA6W793ZH;
@@ -620,6 +631,7 @@
 			baseConfigurationReference = 3EB99A937E442DA5640A987E /* Pods-QR Code Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "QR Code Demo/QR Code Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"QR Code Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = VWA6W793ZH;

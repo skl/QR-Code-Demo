@@ -1,0 +1,11 @@
+{
+    "Simulator Target Bundle": "com.kaizendigital.QR-Code-Demo",
+    "aps": {
+        "category": "SIGN_IN_REQUEST",
+        "alert": "New sign-in request",
+        "sound": "default",
+        "badge": 1
+    },
+    "SIGN_IN_ACCOUNT": "alice@google.com",
+    "SIGN_IN_ISSUER": "Example"
+}

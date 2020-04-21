@@ -35,7 +35,7 @@ struct OTPView: View {
                 Text("Scan")
             })
                 .sheet(isPresented: $isShowingScanner) {
-                    CodeScannerView(codeTypes: [.qr], simulatedData: "Simulated data string", completion: self.handleScan)
+                    CodeScannerView(codeTypes: [.qr], simulatedData: "otpauth://totp/Example:alice@google.com?secret=JBSWY3DPEHPK3PXP&issuer=Example", completion: self.handleScan)
             }
         }
     }
